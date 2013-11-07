@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="css/css.css" rel="stylesheet" type="text/css"/>
+<script src="./js/jquery.min.js" type="text/javascript"></script>
+<link href="./css/index_slider.css" media="screen" rel="stylesheet" type="text/css">
+<script src="./js/index_slider.js" type="text/javascript"></script>
+<title>无标题文档</title>
+</head>
+
+<body>
+<!--head 开始-->
+   <!--top-bar-area 开始-->
+<div class="top-bar-area">
+
+<div style="z-index: 101;" class="top-bar prsnRe">
+    <div class="btn prsnAb frt" id="prsnabflt">
+    
+      <div class="flt lang-ctrl ">  
+        <a href="#"><b>登录</b></a>
+        <em class="ico hd">|</em>
+        <a href="#"><b>免费注册</b></a>
+      </div>
+    
+    <em class="ico flt hd">|</em>
+    <div class="flt lang-ctrl ">
+        <dl class="ctrl-list">
+            <dt>
+            <a id="cur_lang" class="btn-sweatch" href="#">
+                <span>Language</span>
+                <em lang="en" class="ico arror-down">▼</em>
+            </a>
+            </dt>
+            <dd id="lang_list" style="display:block;" class="ft-ctr list-item">
+                <form method="post" id="lang_form"><input type="hidden" value="zh_CN" name="language" id="language">
+                 <ul>
+                 <li><a href="#" name="zh_CN">中文简体</a></li>
+                 <li><a href="#" name="en_US">English</a></li>
+             </ul></form>
+            </dd>
+        </dl>
+    </div></div>
+    <div class="btn prsnAb frt" id="shouyedivid">
+        <a href="#" id="collecttion" class="mlt10">收藏本站</a>
+        <a href="#" id="shouye" class="mlt10">设为首页</a>
+    </div>
+</div>
+
+
+</div> 
+   <!--top-bar-area 结束-->
+   
+   <!--lay-head 开始-->
+   <div class="lay-head">
+<!-- logo -->
+<a href="#">
+<img src="img/logo.jpg" style="padding-top:15px;float:left;display:inline;">
+</a>
+<!-- logo end -->
+<!-- search -->
+<ul class="ul-search">
+    <li><div class="search-bar">
+    <form onsubmit="return false;" method="post" id="searchForm">
+    <input type="text" value="关键字搜索" name="searchText" id="searchText" class="search-txt flt" style="cursor:text;">
+    <input type="button" id="btnSearch" class="search-btn flt" value="搜索">
+    </form></div></li>
+    <li class="keyword">
+<div id="demo" style="overflow:hidden;height:20px;width:280px; background:url(img/icon_infomation.gif) no-repeat 0 5px;">
+  <ul id="demo1">  
+  <li><a href="#" target="_blank">XP Menu 仿QQ菜单管理器左侧菜单</a></li>
+  <li><a href="#" target="_blank">多层嵌套的一个层展开</a></li>
+  <li><a href="#" target="_blank">《Java2核心技术卷2:高级特性》第7版</a></li>
+  <li><a href="#" target="_blank">CSS、HTML教程打包下载 (CHM)</a></li>
+  <li><a href="#" target="_blank">《C++ Primer》中文第四版 chm</a></li>
+  <li><a href="#" target="_blank">C++工资管理系统(Access)</a></li>
+  <li><a href="#" target="_blank">非常牛的左侧栏JS折叠菜单</a></li>
+  </ul> 
+  <div id="demo2"></div>
+</div> 
+<script> 
+var speed=150 
+var demo=document.getElementById("demo"); 
+var demo2=document.getElementById("demo2"); 
+var demo1=document.getElementById("demo1"); 
+demo2.innerHTML=demo1.innerHTML 
+function Marquee(){ 
+if(demo2.offsetTop-demo.scrollTop<=0) 
+  demo.scrollTop-=demo1.offsetHeight 
+else{ 
+  demo.scrollTop++ 
+} 
+} 
+var MyMar=setInterval(Marquee,speed) 
+demo.onmouseover=function() {clearInterval(MyMar)} 
+demo.onmouseout=function() {MyMar=setInterval(Marquee,speed)} 
+</script> 
+
+    <!--热门搜索：
+    
+        <a  href="#" title="QQ游戏">QQ游戏</a>
+    
+        <a  href="#" title="YY">YY</a>
+    
+        <a  href="#" title="相机">相机</a>
+    
+        <a  href="#" title="暴风影音">暴风影音</a>
+    
+        <a  href="#" title="百度">百度</a>-->
+    
+    </li>
+</ul>
+<!-- search end -->
+</div>
+   <!--lay-head 结束-->
+   
+   <!--lay-navi 开始-->
+   <div class="lay-navi">
+	<ul style="position:relative;" class="ul-nav">
+		<li><a href="#"><span class="nav-select">首页</span></a></li>
+		<li class="hover" id="gamelimenu"><a href="#" class="nav-link">通知公告</a>
+            <div style="display:none;" class="gamesubmenu nav-link-1" id="gamesubmenu" flag="false">
+                <em class="div_leftbg"></em>
+                <dl class="submenulist">
+                  <dd><span><a href="#">课程通知</a></span></dd>
+                  <dd><span><a href="#">税收公告</a></span></dd>			         			
+                </dl>
+            </div>
+		</li>
+		<li id="softlimenu"><a href="#" class="nav-link">税收宣传</a>
+            <div style="display:none;" class="softsubmenu nav-link-1" id="softsubmenu" flag="false">
+            <em class="div_leftbg"></em>
+                <dl class="submenulist">
+                  <dd><span><a href="#">税收知识</a></span></dd>
+                  <dd><span><a href="#">政策法规</a></span></dd>
+                </dl>
+            </div>
+		</li>
+        <li id="guide"><a href="#" class="nav-link">办税指南</a>
+            <div style="display:none;" class="guide nav-link-1" id="guide" flag="false">
+            <em class="div_leftbg"></em>
+                <dl class="guide">
+                  <dd><span><a href="#">税务登记</a></span></dd>
+                      <dd><span><a href="#">发票管理</a></span></dd>
+                      <dd><span><a href="#">申报征收</a></span></dd>
+                      <dd><span><a href="#">税收优惠</a></span></dd>
+                      <dd><span><a href="#">涉外税收</a></span></dd>
+                </dl>
+            </div>
+		</li>
+		<li><a href="#" class="nav-link">品牌专区</a></li>
+		<li><a href="#" class="nav-link">下载专区</a></li>
+        <li><a href="#" class="nav-link">纳税服务</a></li>
+        <li><a href="#" class="nav-link">纳税维权</a></li>
+        <li><a href="#" class="nav-link">关于网校</a></li>
+	</ul>
+	<script type="text/javascript">
+		if(document.getElementById("softlimenu")){
+			$('#softlimenu').hover(function(){
+				$(this).children('a').addClass("forselect");
+				$("#softsubmenu").stop(true,true).show();
+			},function(){
+				$(this).children('a').removeClass("forselect");
+				$("#softsubmenu").stop(true,true).hide();
+			});
+		}
+		if(document.getElementById("gamelimenu")){
+			$('#gamelimenu').hover(function(){
+				$(this).children('a').addClass("forselect");
+				$("#gamesubmenu").stop(true,true).show();
+			},function(){
+				$(this).children('a').removeClass("forselect");
+				$("#gamesubmenu").stop(true,true).hide();
+			});
+		}
+		if(document.getElementById("guide")){
+			$('#guide').hover(function(){
+				$(this).children('a').addClass("forselect");
+				$("#guide").stop(true,true).show();
+			},function(){
+				$(this).children('a').removeClass("forselect");
+				$("#guide").stop(true,true).hide();
+			});
+		}
+	</script>
+</div>
+   <!--lay-navi 结束-->
+   
+   
+<!--head 结束-->
+
+<!--middle 开始-->
+<div class="middle">
+
+  
+  <!--左边菜单 开始-->
+  <div class="left-menu tax-1">
+    <ul>
+      <li><a href="#">课程通知</a></li>
+      <li class="hover"><a href="#">税收公告</a></li>
+    </ul>
+  </div>
+  <!--左边菜单 结束-->
+  
+  <!--information 开始 -->
+  <div class="information right-content">
+  <ul class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">通知公告</a></li>
+    <li><a href="#">税收公告</a></li>
+    <li class="hover"><a href="#">网络机打发票纳税端办税平台操作的相关培训（一）</a></li>
+  </ul>
+  <div style="padding:0 10px;">
+  <h3>
+  <span class="title">网络机打发票纳税端办税平台操作的相关培训（一）</span>
+  </h3>
+  <div class="info"><span>发布日期：2013-09-27</span><span>浏览次数：41</span><span>字号：[ <a href="#">大</a><a href="#">中</a><a href="#">小</a> ]</span></div>
+  <p style="text-indent: 25px;">近期地方反映，对于《中华人民共和国税收征收管理法实施细则》第79条关于应退税款抵扣欠缴税款（以下简称以退抵欠）的规定是否属于强制执行措施有不同理解。为了全面准确贯彻强制执行措施和以退抵欠的规定，根据《中华人民共和国税收征收管理法》（以下简称税收征管法）及其实施细则的有关规定，现将应退税款抵扣欠缴税款有关问题公告如下：税收征管法第40条规定，税收强制执行措施是指对经税务机关责令限期缴纳税款逾期仍不缴纳的情形，税务机关采取书面通知其开户银行或者其他金融机构从其存款中扣缴税款；扣押、查封、依法拍卖或者变卖其价值相当于应纳税款的商品、货物或者其他财产，以拍卖或者变卖所得抵缴税款的行为.以退抵欠是税务机关计算确定纳税人应纳税义务的一项税款结算制度，不涉及从存款中扣缴税款和扣押、查封、拍卖、变卖强制行为。以退抵欠确定后有余额的退还纳税人；不足部分，责令纳税人继续缴纳。以退抵欠之后纳税人仍有欠税，经责令缴纳仍不缴纳的，税务机关采取强制执行措施，为行政强制执行。以退抵欠不属于行近期地方反映，对于《中华人民共和国税收征收管理法实施细则》第79条关于应退税款抵扣欠缴税款（以下简称以退抵欠）的规定是否属于强制执行措施有不同理解。为了全面准确贯彻强制执行措施和以退抵欠的规定，根据《中华人民共和国税收征收管理法》（以下简称税收征管法）及其实施细则的有关规定，现将应退税款抵扣欠缴税款有关问题公告如下：税收征管法第40条规定，税收强制执行措施是指对经税务机关责令限期缴纳税款逾期仍不缴纳的情形，税务机关采取书面通知其开户银行或者其他金融机构从其存款中扣缴税款；扣押、查封、依法拍卖或者变卖其价值相当于应纳税款的商品、货物或者其他财产，以拍卖或者变卖所得抵缴税款的行为.以退抵欠是税务机关计算确定纳税人应纳税义务的一项税款结算制度，不涉及从存款中扣缴税款和扣押、查封、拍卖、变卖强制行为。以退抵欠确定后有余额的退还纳税人；不足部分，责令纳税人继续缴纳。以退抵欠之后纳税人仍有欠税，经责令缴纳仍不缴纳的，税务机关采取强制执行措施，为行政强制执行。以退抵欠不属于行政强制执行。特此公告。政强制执行。特此公告。</p>
+   </div>
+  
+  </div>
+  <!--information 结束-->
+ 
+</div>
+<!--middle 结束-->
+<div class="Clear"></div>
+<!--foot 开始-->  
+<div class="foot">
+<div class="foot-ul">
+<ul>
+  <li><a href="#">网站导航</a></li><li><em class="ico hd">|</em></li>
+  <li><a href="#">关于本站</a></li><li><em class="ico hd">|</em></li>
+  <li><a href="#">版权申明</a></li><li><em class="ico hd">|</em></li>
+  <li><a href="#">联系我们</a></li><li><em class="ico hd">|</em></li>
+  <li><a href="#">访问统计</a></li><li><em class="ico hd">|</em></li>
+  <li><a href="#">旧版回顾</a></li>
+  <div class="Clear"></div>
+</ul>
+<div class="Clear"></div>
+</div>
+<div class="Clear"></div>
+<p>直属局网络纳税人学校 COPYRIGHT 2013 ALL RIGHT RESERVED</p>
+<p>税收服务热线：028-12366 ICP备05022559号</p>
+</div>
+<!--foot 结束-->
+<script type="text/javascript">
+    var t = n = 0, count = $("#play_list a").size();
+    $(function() {
+        $("#play_list a:not(:first-child)").hide();
+        $("#play_text li").click(function() {
+            $("#play_text li").removeClass("hover");
+            $(this).addClass('hover');
+            var i = $(this).text() - 1;
+            n = i;
+            if (i >= count) return;
+            $("#play_info").unbind().click(function() {
+                window.open($("#play_list a").eq(i).attr('href'), "_blank")
+            });
+            $("#play_list a").filter(":visible").fadeOut(1000).parent().children().eq(i).fadeIn(1000);
+        });
+        t = setInterval("showAuto()", 7000);
+
+        //鼠标悬停时停止自动滚动
+        $("#play_list a img").hover(function() {
+            clearInterval(t)
+        }, function() {
+            t = setInterval("showAuto()", 7000);
+        });
+
+        $("#play_text ul li").hover(function() {
+            clearInterval(t)
+        }, function() {
+            t = setInterval("showAuto()", 7000);
+        });
+
+    })
+    function showAuto() {
+
+        n = n >= (count - 1) ? 0 : ++n;
+
+        $("#play_text li").eq(n).trigger('click');
+
+    }
+</script>
+</body>
+</html>
